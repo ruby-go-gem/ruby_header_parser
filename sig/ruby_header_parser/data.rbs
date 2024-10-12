@@ -1,0 +1,19 @@
+module RubyHeaderParser
+  class Data
+    attr_reader data: Hash[untyped, untyped]
+
+    def initialize: () -> void
+
+    def function_arg_pointer_hint: (function_name: String, pos: Integer) -> (:ref | :array | :ref_array | :function | :sref | :str_array | :in_ref)
+
+    def function_self_pointer_hint: (String function_name) -> (:ref | :raw)
+
+    def should_generate_function?: (String function_name) -> bool
+
+    def should_generate_struct?: (String struct_name) -> bool
+
+    def should_generate_type?: (String type_name) -> bool
+
+    def should_generate_enum?: (String enum_name) -> bool
+  end
+end
