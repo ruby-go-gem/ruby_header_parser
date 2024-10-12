@@ -1,0 +1,9 @@
+module RubyHeaderParser
+  module Util
+    def self.find_field: (Array[String] array, String field_name) -> String?
+
+    def self.split_signature: (String signature) -> Array[String]
+
+    def self.sanitize_type: (String type) -> String
+  end
+end
