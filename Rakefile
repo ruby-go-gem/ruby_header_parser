@@ -9,4 +9,7 @@ require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
 
-task default: :spec
+desc "Run all development tasks"
+task dev_all: %i[spec rubocop]
+
+task default: :dev_all
