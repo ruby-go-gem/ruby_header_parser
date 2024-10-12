@@ -30,17 +30,8 @@ Metrics/BlockLength:
     - "*.gemspec"
     - "**/*_spec.rb"
 
-Metrics/CyclomaticComplexity:
-  Max: 13
-
 Metrics/MethodLength:
-  Max: 28
-
-Metrics/PerceivedComplexity:
-  Max: 11
-
-Style/FetchEnvVar:
-  Enabled: false
+  Max: 21
 
 Style/NumericPredicate:
   EnforcedStyle: comparison
