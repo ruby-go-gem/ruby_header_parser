@@ -1,0 +1,12 @@
+module RubyHeaderParser
+  class FunctionDefinition
+    attr_accessor name: String
+    attr_accessor definition: String
+    attr_accessor typeref: TyperefDefinition
+    attr_accessor args: Array[ArgumentDefinition]
+
+    def initialize: (name: String, definition: String, typeref: TyperefDefinition, args: Array[ArgumentDefinition]) -> void
+
+    def ==: (untyped other) -> bool
+  end
+end
