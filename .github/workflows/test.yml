@@ -50,9 +50,38 @@ jobs:
           webhook-url: ${{ secrets.SLACK_WEBHOOK }}
           matrix: ${{ toJson(matrix) }}
 
+  rbs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ruby
+          bundler-cache: true
+
+      - name: bundle update
+        run: |
+          set -xe
+          bundle config path vendor/bundle
+          bundle update --jobs $(nproc) --retry 3
+
+      - run: bundle exec rake rbs:install
+      - run: bundle exec rake rbs
+
+      - name: Slack Notification (not success)
+        uses: act10ns/slack@v2
+        if: "! success()"
+        continue-on-error: true
+        with:
+          status: ${{ job.status }}
+          webhook-url: ${{ secrets.SLACK_WEBHOOK }}
+
   notify:
     needs:
       - test
+      - rbs
 
     runs-on: ubuntu-latest
 
