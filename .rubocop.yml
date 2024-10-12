@@ -3,20 +3,6 @@ AllCops:
   NewCops: enable
   SuggestExtensions: false
 
-  Exclude:
-    - "_benchmark/**/*"
-    - "ruby/testdata/example/vendor/**/*"
-
-    # ref. https://github.com/rubocop/rubocop/blob/v1.66.1/config/default.yml
-    - 'node_modules/**/*'
-    - 'tmp/**/*'
-    - 'vendor/**/*'
-    - '.git/**/*'
-
-Gemspec/RequireMFA:
-  Exclude:
-    - ruby/testdata/example/example.gemspec
-
 Layout/DotPosition:
   EnforcedStyle: trailing
 
@@ -41,10 +27,6 @@ Metrics/BlockLength:
     - "*.gemspec"
     - "**/*_spec.rb"
 
-Metrics/ClassLength:
-  Exclude:
-    - "**/*_test.rb"
-
 Metrics/CyclomaticComplexity:
   Max: 13
 
@@ -53,10 +35,6 @@ Metrics/MethodLength:
 
 Metrics/PerceivedComplexity:
   Max: 11
-
-Style/Documentation:
-  Exclude:
-    - "**/*_test.rb"
 
 Style/FetchEnvVar:
   Enabled: false
