@@ -22,3 +22,5 @@ gems:
     ignore: true
   - name: ruby_header_parser
     ignore: true
+
+  - name: yaml
