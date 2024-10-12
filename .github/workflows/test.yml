@@ -38,8 +38,8 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install -y universal-ctags
 
-      - run: bundle exec rspec
-      - run: bundle exec rubocop
+      - run: bundle exec rake spec
+      - run: bundle exec rake rubocop
 
       - name: Slack Notification (not success)
         uses: act10ns/slack@v2
