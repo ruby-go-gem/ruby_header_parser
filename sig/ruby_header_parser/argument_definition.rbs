@@ -1,0 +1,14 @@
+module RubyHeaderParser
+  class ArgumentDefinition
+    attr_accessor type: String
+    attr_accessor name: String
+    attr_accessor pointer: :ref | :array | nil
+    attr_accessor length: Integer
+
+    def initialize: (type: String, name: String, pointer: (:ref | :array)?, ?length: Integer) -> void
+
+    def ==: (untyped other) -> bool
+
+    def pointer?: () -> bool
+  end
+end
