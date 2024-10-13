@@ -5,6 +5,9 @@ module RubyHeaderParser
     attr_reader dist_preprocessed_header_file: String
     attr_reader data: Data
 
+    DEFAULT_HEADER_FILE: String
+    DEFAULT_INCLUDE_PATHS: Array[String]
+
     def initialize: (
         dist_preprocessed_header_file: String,
         ?header_file: String,

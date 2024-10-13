@@ -19,11 +19,18 @@ module RubyHeaderParser
     #   @return [RubyHeaderParser::Data]
     attr_reader :data
 
+    DEFAULT_HEADER_FILE = "#{RbConfig::CONFIG["rubyhdrdir"]}/ruby.h".freeze
+
+    DEFAULT_INCLUDE_PATHS = [
+      RbConfig::CONFIG["rubyarchhdrdir"],
+      RbConfig::CONFIG["rubyhdrdir"],
+    ].freeze
+
     # @param header_file [String] path to ruby.h
     # @param include_paths [Array<String>]
     # @param dist_preprocessed_header_file [String]
-    def initialize(dist_preprocessed_header_file:, header_file: "#{RbConfig::CONFIG["rubyhdrdir"]}/ruby.h",
-                   include_paths: [RbConfig::CONFIG["rubyarchhdrdir"], RbConfig::CONFIG["rubyhdrdir"]])
+    def initialize(dist_preprocessed_header_file:, header_file: DEFAULT_HEADER_FILE,
+                   include_paths: DEFAULT_INCLUDE_PATHS)
       @header_file = header_file
       @include_paths = include_paths
       @dist_preprocessed_header_file = dist_preprocessed_header_file
