@@ -26,3 +26,8 @@ RSpec.configure do |config|
     meta[:aggregate_failures] = true
   end
 end
+
+# @return [String]
+def default_config_file
+  File.expand_path("../config/default.yml", __dir__)
+end
