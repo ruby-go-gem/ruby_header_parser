@@ -232,7 +232,7 @@ module RubyHeaderParser
     def parse_typeref_type(definition:, function_name:, typeref_field:, filepath:, line_num:)
       typeref_type =
         if typeref_field
-          typeref_field.gsub(/[A-Z_]+\s*\(\(.*\)\)/, "").gsub("RUBY_SYMBOL_EXPORT_BEGIN", "")
+          typeref_field.gsub(/[A-Z_]+\s*\(\(.*\)\)/, "")
         else
           # parse typeref in definition
           type = definition[0...definition.index(function_name)] || ""
