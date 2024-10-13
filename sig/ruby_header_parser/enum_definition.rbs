@@ -1,0 +1,10 @@
+module RubyHeaderParser
+  class EnumDefinition
+    attr_accessor name: String
+    attr_accessor values: Array[String]
+
+    def initialize: (name: String, ?values: Array[String]) -> void
+
+    def ==: (untyped other) -> bool
+  end
+end

@@ -235,7 +235,8 @@ module RubyHeaderParser
           typeref_field.gsub(/[A-Z_]+\s*\(\(.*\)\)/, "").gsub("RUBY_SYMBOL_EXPORT_BEGIN", "")
         else
           # parse typeref in definition
-          definition[0...definition.index(function_name)].gsub("char *", "char*").strip
+          type = definition[0...definition.index(function_name)] || ""
+          type.gsub("char *", "char*").strip
         end
 
       typeref_type = Util.sanitize_type(typeref_type)
@@ -301,7 +302,8 @@ module RubyHeaderParser
     #   - length [Integer]
     def analyze_argument_type(function_name:, arg_pos:, parts:)
       pointer, length = prepare_argument_parts(arg_pos:, parts:)
-      original_type = Util.sanitize_type(parts[0...-1].join(" "))
+      type = parts[0...-1] || []
+      original_type = Util.sanitize_type(type.join(" "))
 
       case original_type
       when /\*+$/
@@ -329,13 +331,16 @@ module RubyHeaderParser
     #   - pointer [Symbol,nil]
     #   - length [Integer]
     def prepare_argument_parts(parts:, arg_pos:)
-      pointer = nil
-      length = 0
-
       if parts[-1] =~ /\[([0-9]+)?\]$/
         parts[-1].gsub!(/\[([0-9]+)?\]$/, "")
         length = ::Regexp.last_match(1).to_i
-        pointer = :array
+
+        unless parts[-1] =~ /^[0-9a-zA-Z_]+$/
+          # last elements isn't dummy argument
+          parts << "arg#{arg_pos}"
+        end
+
+        return [:array, length]
       end
 
       unless parts[-1] =~ /^[0-9a-zA-Z_]+$/
@@ -343,13 +348,13 @@ module RubyHeaderParser
         parts << "arg#{arg_pos}"
       end
 
-      [pointer, length]
+      [nil, 0]
     end
 
     # @param type [String]
     def pointer_length(type)
       type =~ /(\*+)$/
-      ::Regexp.last_match(1).length
+      ::Regexp.last_match(1)&.length || 0
     end
   end
 end

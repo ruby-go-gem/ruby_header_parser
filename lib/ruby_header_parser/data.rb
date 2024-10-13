@@ -8,7 +8,7 @@ module RubyHeaderParser
     attr_reader :data
 
     def initialize
-      yaml = File.read(File.join(__dir__, "data.yml"))
+      yaml = File.read(File.join(__dir__.to_s, "data.yml"))
       @data = YAML.safe_load(yaml, aliases: true, permitted_classes: [Regexp])
     end
 

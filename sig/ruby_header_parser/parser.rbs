@@ -1,0 +1,80 @@
+module RubyHeaderParser
+  class Parser
+    attr_reader header_file: String
+    attr_reader include_paths: Array[String]
+    attr_reader dist_preprocessed_header_file: String
+    attr_reader data: Data
+
+    def initialize: (
+        dist_preprocessed_header_file: String,
+        ?header_file: String,
+        ?include_paths: Array[String]
+      ) -> void
+
+    def extract_function_definitions: () -> Array[FunctionDefinition]
+
+    def extract_static_inline_function_definitions: () -> Array[FunctionDefinition]
+
+    def extract_struct_definitions: () -> Array[StructDefinition]
+
+    def extract_type_definitions: () -> Array[TyperefDefinition]
+
+    def extract_enum_definitions: () -> Array[EnumDefinition]
+
+    private
+
+    def __extract_function_definitions: (c_kinds: String, kind: String, is_parse_multiline_definition: bool) -> Array[FunctionDefinition]
+
+    def generate_function_definition_from_line: (line: String, kind: String, is_parse_multiline_definition: bool) -> FunctionDefinition?
+
+    def execute_ctags: (?String args) -> String
+
+    def read_definition_from_header_file: (String file, Integer line_num) -> String
+
+    def parse_function_definition: (
+        filepath: String,
+        pattern: String,
+        line_num: Integer,
+        is_parse_multiline_definition: bool
+      ) -> String
+
+    def parse_definition_args: (String function_name, String? signature) -> Array[ArgumentDefinition]
+
+    def create_typeref: (
+        definition: String,
+        function_name: String,
+        typeref_field: String?,
+        filepath: String,
+        line_num: Integer
+      ) -> TyperefDefinition
+
+    def parse_typeref_type: (
+        definition: String,
+        function_name: String,
+        typeref_field: String?,
+        filepath: String,
+        line_num: Integer
+      ) -> String
+
+    def read_file_line: (filepath: String, line_num: Integer) -> String?
+
+    def generate_argument_definition: (
+        function_name: String,
+        arg: String,
+        arg_pos: Integer
+      ) -> ArgumentDefinition
+
+    def analyze_argument_type: (
+        function_name: String,
+        arg_pos: Integer,
+        parts: Array[String]
+      ) -> [String, (:ref | :array | :ref_array | :function | :sref | :str_array | :in_ref)?, Integer]
+
+    def prepare_argument_parts: (
+        parts: Array[String],
+        arg_pos: Integer
+      ) -> [(:array)?, Integer]
+
+    def pointer_length: (String) -> Integer
+  end
+end

@@ -1,0 +1,9 @@
+module RubyHeaderParser
+  class StructDefinition
+    attr_accessor name: String
+
+    def initialize: (name: String) -> void
+
+    def ==: (untyped other) -> bool
+  end
+end

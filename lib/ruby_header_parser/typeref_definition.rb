@@ -8,11 +8,11 @@ module RubyHeaderParser
     attr_accessor :type
 
     # @!attribute pointer
-    #   @return [Symbol,nil]
+    #   @return [Symbol,nil] :ref, :raw
     attr_accessor :pointer
 
     # @param type [String]
-    # @param pointer [Symbol,nil] :ref
+    # @param pointer [Symbol,nil] :ref, :raw
     def initialize(type:, pointer: nil)
       @type = type
       @pointer = pointer
