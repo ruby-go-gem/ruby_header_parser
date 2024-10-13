@@ -2,7 +2,7 @@
 
 module RubyHeaderParser
   # Manager for config file
-  class Data
+  class Config
     # @!attribute [r] data
     #   @return [Hash]
     attr_reader :data

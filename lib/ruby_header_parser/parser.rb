@@ -16,8 +16,8 @@ module RubyHeaderParser
     attr_reader :dist_preprocessed_header_file
 
     # @!attribute [r] data
-    #   @return [RubyHeaderParser::Data]
-    attr_reader :data
+    #   @return [RubyHeaderParser::Config]
+    attr_reader :config
 
     DEFAULT_HEADER_FILE = "#{RbConfig::CONFIG["rubyhdrdir"]}/ruby.h".freeze
 
@@ -38,7 +38,7 @@ module RubyHeaderParser
       @header_file = header_file
       @include_paths = include_paths
       @dist_preprocessed_header_file = dist_preprocessed_header_file || File.join(Dir.tmpdir, "ruby_preprocessed.h")
-      @data = Data.new
+      @config = Config.new
     end
 
     # @return [Array<RubyHeaderParser::FunctionDefinition>]
@@ -59,7 +59,7 @@ module RubyHeaderParser
         parts = line.split("\t")
 
         struct_name = parts[0]
-        next unless data.should_generate_struct?(struct_name)
+        next unless config.should_generate_struct?(struct_name)
 
         definitions << StructDefinition.new(
           name: struct_name,
@@ -76,7 +76,7 @@ module RubyHeaderParser
 
         type_name = parts[0]
 
-        next unless data.should_generate_type?(type_name)
+        next unless config.should_generate_type?(type_name)
 
         definitions << TypeDefinition.new(
           name: type_name,
@@ -97,7 +97,7 @@ module RubyHeaderParser
 
           value = parts[0]
 
-          next unless data.should_generate_enum?(enum_name)
+          next unless config.should_generate_enum?(enum_name)
 
           hash[enum_name] ||= EnumDefinition.new(name: enum_name)
           hash[enum_name].values << value
@@ -131,7 +131,7 @@ module RubyHeaderParser
       function_name = parts[0]
       filepath = parts[1]
 
-      return nil unless data.should_generate_function?(function_name)
+      return nil unless config.should_generate_function?(function_name)
 
       return nil unless parts[3] == kind
 
@@ -228,7 +228,7 @@ module RubyHeaderParser
       typeref_pointer = nil
       if typeref_type.match?(/\*+$/)
         typeref_type = typeref_type.gsub(/\*+$/, "").strip
-        typeref_pointer = data.function_self_pointer_hint(function_name)
+        typeref_pointer = config.function_self_pointer_hint(function_name)
       end
 
       TyperefDefinition.new(type: typeref_type, pointer: typeref_pointer)
@@ -319,12 +319,12 @@ module RubyHeaderParser
       case original_type
       when /\*+$/
         type = original_type.gsub(/\*+$/, "").strip
-        pointer = data.function_arg_pointer_hint(function_name:, pos: arg_pos)
+        pointer = config.function_arg_pointer_hint(function_name:, pos: arg_pos)
 
       when /^void\s*/, /\(.*\)/
         # function pointer (e.g. void *(*func)(void *)) is treated as `void*`
         type = "void"
-        pointer = data.function_arg_pointer_hint(function_name:, pos: arg_pos)
+        pointer = config.function_arg_pointer_hint(function_name:, pos: arg_pos)
 
       else
         type = original_type

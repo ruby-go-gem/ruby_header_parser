@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-RSpec.describe RubyHeaderParser::Data do
-  let(:data) { RubyHeaderParser::Data.new }
+RSpec.describe RubyHeaderParser::Config do
+  let(:config) { RubyHeaderParser::Config.new }
 
   describe "#function_arg_pointer_hint" do
-    subject { data.function_arg_pointer_hint(function_name:, pos:) }
+    subject { config.function_arg_pointer_hint(function_name:, pos:) }
 
     context "found in config/default.yml" do
       let(:function_name) { "rb_funcallv" }
@@ -22,7 +22,7 @@ RSpec.describe RubyHeaderParser::Data do
   end
 
   describe "#function_self_pointer_hint" do
-    subject { data.function_self_pointer_hint(function_name) }
+    subject { config.function_self_pointer_hint(function_name) }
 
     context "found in default.yml" do
       let(:function_name) { "RSTRING_PTR" }
@@ -38,7 +38,7 @@ RSpec.describe RubyHeaderParser::Data do
   end
 
   describe "#should_generate_function?" do
-    subject { data.should_generate_function?(function_name) }
+    subject { config.should_generate_function?(function_name) }
 
     context "rb function (denied)" do
       let(:function_name) { "rb_check_safe_str" }
@@ -60,7 +60,7 @@ RSpec.describe RubyHeaderParser::Data do
   end
 
   describe "#should_generate_struct?" do
-    subject { data.should_generate_struct?(struct_name) }
+    subject { config.should_generate_struct?(struct_name) }
 
     context "rb struct" do
       let(:struct_name) { "rb_random_struct" }
@@ -76,7 +76,7 @@ RSpec.describe RubyHeaderParser::Data do
   end
 
   describe "#should_generate_type?" do
-    subject { data.should_generate_type?(type_name) }
+    subject { config.should_generate_type?(type_name) }
 
     context "rb type" do
       let(:type_name) { "rb_data_type_t" }
@@ -98,7 +98,7 @@ RSpec.describe RubyHeaderParser::Data do
   end
 
   describe "#should_generate_enum?" do
-    subject { data.should_generate_enum?(enum_name) }
+    subject { config.should_generate_enum?(enum_name) }
 
     context "ruby_value_type" do
       let(:enum_name) { "ruby_value_type" }

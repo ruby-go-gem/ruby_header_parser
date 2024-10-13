@@ -3,7 +3,7 @@ module RubyHeaderParser
     attr_reader header_file: String
     attr_reader include_paths: Array[String]
     attr_reader dist_preprocessed_header_file: String
-    attr_reader data: Data
+    attr_reader config: Config
 
     DEFAULT_HEADER_FILE: String
     DEFAULT_INCLUDE_PATHS: Array[String]

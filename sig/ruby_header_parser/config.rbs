@@ -1,5 +1,5 @@
 module RubyHeaderParser
-  class Data
+  class Config
     attr_reader data: Hash[untyped, untyped]
 
     def initialize: () -> void

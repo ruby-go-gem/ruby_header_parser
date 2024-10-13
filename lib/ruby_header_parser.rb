@@ -10,7 +10,7 @@ module RubyHeaderParser
   class Error < StandardError; end
 
   autoload :ArgumentDefinition, "ruby_header_parser/argument_definition"
-  autoload :Data,               "ruby_header_parser/data"
+  autoload :Config,             "ruby_header_parser/config"
   autoload :EnumDefinition,     "ruby_header_parser/enum_definition"
   autoload :FunctionDefinition, "ruby_header_parser/function_definition"
   autoload :Parser,             "ruby_header_parser/parser"
