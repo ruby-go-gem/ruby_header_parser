@@ -26,14 +26,18 @@ module RubyHeaderParser
       RbConfig::CONFIG["rubyhdrdir"],
     ].freeze
 
-    # @param header_file [String] path to ruby.h
+    # @param header_file [String] Path to `ruby.h`
     # @param include_paths [Array<String>]
-    # @param dist_preprocessed_header_file [String]
-    def initialize(dist_preprocessed_header_file:, header_file: DEFAULT_HEADER_FILE,
+    # @param dist_preprocessed_header_file [String,nil] Destination path to the output of preprocessed ruby.h.
+    #                                      (default: `"#{Dir.tmpdir}/ruby_preprocessed.h"`)
+    #
+    # @note `dist_preprocessed_header_file` is used as the output destination for temporary files when the parser
+    #       is executed
+    def initialize(dist_preprocessed_header_file: nil, header_file: DEFAULT_HEADER_FILE,
                    include_paths: DEFAULT_INCLUDE_PATHS)
       @header_file = header_file
       @include_paths = include_paths
-      @dist_preprocessed_header_file = dist_preprocessed_header_file
+      @dist_preprocessed_header_file = dist_preprocessed_header_file || File.join(Dir.tmpdir, "ruby_preprocessed.h")
       @data = Data.new
     end
 

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "yaml"
+require "tmpdir"
 
 require_relative "ruby_header_parser/version"
 
