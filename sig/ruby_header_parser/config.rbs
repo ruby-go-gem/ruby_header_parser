@@ -2,7 +2,7 @@ module RubyHeaderParser
   class Config
     attr_reader data: Hash[untyped, untyped]
 
-    def initialize: () -> void
+    def initialize: (String config_file) -> void
 
     def function_arg_pointer_hint: (function_name: String, pos: Integer) -> (:ref | :array | :ref_array | :function | :sref | :str_array | :in_ref)
 

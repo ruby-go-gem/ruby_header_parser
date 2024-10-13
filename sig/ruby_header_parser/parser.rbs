@@ -11,7 +11,8 @@ module RubyHeaderParser
     def initialize: (
         ?dist_preprocessed_header_file: String?,
         ?header_file: String,
-        ?include_paths: Array[String]
+        ?include_paths: Array[String],
+        ?config_file: String?
       ) -> void
 
     def extract_function_definitions: () -> Array[FunctionDefinition]

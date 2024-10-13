@@ -7,8 +7,9 @@ module RubyHeaderParser
     #   @return [Hash]
     attr_reader :data
 
-    def initialize
-      yaml = File.read(File.join(__dir__.to_s, "..", "..", "config", "default.yml"))
+    # @param config_file [String]
+    def initialize(config_file)
+      yaml = File.read(config_file)
       @data = YAML.safe_load(yaml, aliases: true, permitted_classes: [Regexp])
     end
 

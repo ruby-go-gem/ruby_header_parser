@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe RubyHeaderParser::Config do
-  let(:config) { RubyHeaderParser::Config.new }
+  let(:config) { RubyHeaderParser::Config.new(default_config_file) }
 
   describe "#function_arg_pointer_hint" do
     subject { config.function_arg_pointer_hint(function_name:, pos:) }

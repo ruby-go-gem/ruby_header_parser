@@ -30,15 +30,18 @@ module RubyHeaderParser
     # @param include_paths [Array<String>]
     # @param dist_preprocessed_header_file [String,nil] Destination path to the output of preprocessed ruby.h.
     #                                      (default: `"#{Dir.tmpdir}/ruby_preprocessed.h"`)
+    # @param config_file [String,nil] Path to config file (default: `config/default.yml`)
     #
     # @note `dist_preprocessed_header_file` is used as the output destination for temporary files when the parser
     #       is executed
     def initialize(dist_preprocessed_header_file: nil, header_file: DEFAULT_HEADER_FILE,
-                   include_paths: DEFAULT_INCLUDE_PATHS)
+                   include_paths: DEFAULT_INCLUDE_PATHS, config_file: nil)
       @header_file = header_file
       @include_paths = include_paths
       @dist_preprocessed_header_file = dist_preprocessed_header_file || File.join(Dir.tmpdir, "ruby_preprocessed.h")
-      @config = Config.new
+
+      config_file ||= File.expand_path("../../config/default.yml", __dir__.to_s)
+      @config = Config.new(config_file)
     end
 
     # @return [Array<RubyHeaderParser::FunctionDefinition>]
