@@ -8,6 +8,8 @@ module RubyHeaderParser
     attr_reader :data
 
     # @param config_file [String]
+    #
+    # @note See [CONFIG.md](../file.CONFIG.html) for config file details
     def initialize(config_file)
       yaml = File.read(config_file)
       @data = YAML.safe_load(yaml, aliases: true, permitted_classes: [Regexp])

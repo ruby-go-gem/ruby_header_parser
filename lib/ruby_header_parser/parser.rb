@@ -34,6 +34,8 @@ module RubyHeaderParser
     #
     # @note `dist_preprocessed_header_file` is used as the output destination for temporary files when the parser
     #       is executed
+    #
+    # @note See [CONFIG.md](../file.CONFIG.html) for config file details
     def initialize(dist_preprocessed_header_file: nil, header_file: DEFAULT_HEADER_FILE,
                    include_paths: DEFAULT_INCLUDE_PATHS, config_file: nil)
       @header_file = header_file
