@@ -1,0 +1,6 @@
+module Kernel
+  # FIXME: monkey patch for `exception` arg of `Kernel.system`
+  def self?.system: (String command, *String args, ?unsetenv_others: boolish, ?pgroup: true | Integer, ?umask: Integer, ?in: redirect_fd, ?out: redirect_fd, ?err: redirect_fd, ?close_others: boolish, ?chdir: String, ?exception: bool) -> (NilClass | FalseClass | TrueClass)
+    | (Hash[string, string?] env, String command, *String args, ?unsetenv_others: boolish, ?pgroup: true | Integer, ?umask: Integer, ?in: redirect_fd, ?out: redirect_fd, ?err: redirect_fd, ?close_others: boolish, ?chdir: String, ?exception: bool) -> (NilClass | FalseClass | TrueClass)
+    | ...
+end
