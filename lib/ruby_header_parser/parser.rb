@@ -235,7 +235,8 @@ module RubyHeaderParser
           typeref_field.gsub(/[A-Z_]+\s*\(\(.*\)\)/, "").gsub("RUBY_SYMBOL_EXPORT_BEGIN", "")
         else
           # parse typeref in definition
-          definition[0...definition.index(function_name)].gsub("char *", "char*").strip
+          type = definition[0...definition.index(function_name)] || ""
+          type.gsub("char *", "char*").strip
         end
 
       typeref_type = Util.sanitize_type(typeref_type)
