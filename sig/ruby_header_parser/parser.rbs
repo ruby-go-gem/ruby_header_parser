@@ -9,7 +9,7 @@ module RubyHeaderParser
     DEFAULT_INCLUDE_PATHS: Array[String]
 
     def initialize: (
-        dist_preprocessed_header_file: String,
+        ?dist_preprocessed_header_file: String?,
         ?header_file: String,
         ?include_paths: Array[String]
       ) -> void
