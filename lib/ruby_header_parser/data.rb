@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 module RubyHeaderParser
-  # Manager for `data.yml`
+  # Manager for config file
   class Data
     # @!attribute [r] data
     #   @return [Hash]
     attr_reader :data
 
     def initialize
-      yaml = File.read(File.join(__dir__.to_s, "data.yml"))
+      yaml = File.read(File.join(__dir__.to_s, "..", "..", "config", "default.yml"))
       @data = YAML.safe_load(yaml, aliases: true, permitted_classes: [Regexp])
     end
 
