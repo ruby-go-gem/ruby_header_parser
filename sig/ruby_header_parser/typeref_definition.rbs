@@ -1,9 +1,9 @@
 module RubyHeaderParser
   class TyperefDefinition
     attr_accessor type: String
-    attr_accessor pointer: :ref | nil
+    attr_accessor pointer: :ref | :raw | nil
 
-    def initialize: (type: String, pointer: (:ref)?) -> void
+    def initialize: (type: String, pointer: (:ref | :raw)?) -> void
 
     def ==: (untyped other) -> bool
 
