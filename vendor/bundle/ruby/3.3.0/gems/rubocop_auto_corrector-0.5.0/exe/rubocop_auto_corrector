@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'rubocop_auto_corrector/cli'
+require 'rubocop_auto_corrector/version'
+require 'optparse'
+
+opt = OptionParser.new
+params = {
+  auto_correct_count: 2,
+  auto_correct_all: false
+}
+
+Version = RubocopAutoCorrector::VERSION
+
+opt.on(
+  '--autocorrect-count COUNT',
+  'Run `rubocop --autocorrect` and `git commit` for this number of times. (default. 2)'
+) do |v|
+  params[:auto_correct_count] = v.to_i
+end
+
+opt.on(
+  '--auto-correct-count COUNT',
+  "Same to '--autocorrect-count' (deprecated)"
+) do |v|
+  puts "[DEPRECATED] '--auto-correct-count' is deprecated, use '--autocorrect-count'"
+  params[:auto_correct_count] = v.to_i
+end
+
+opt.on('--all', 'Whether run `rubocop` with `--autocorrect-all`. (default. run with `--autocorrect`)') do
+  params[:auto_correct_all] = true
+end
+
+opt.parse!(ARGV)
+
+cli = RubocopAutoCorrector::CLI.new
+
+params[:auto_correct_count].times do
+  cli.perform(params[:auto_correct_all])
+end

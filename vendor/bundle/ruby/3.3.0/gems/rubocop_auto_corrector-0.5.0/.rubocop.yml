@@ -1,0 +1,32 @@
+AllCops:
+  # rubocop 1.3.0+ requires ruby 2.6+
+  TargetRubyVersion: 2.6
+
+  Exclude:
+    - 'spec/dummy/**/*'
+
+    # c.f. https://github.com/rubocop-hq/rubocop/blob/v0.72.0/config/default.yml#L60-L63
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - '.git/**/*'
+
+  NewCops: enable
+  SuggestExtensions: false
+
+Gemspec/DevelopmentDependencies:
+  EnforcedStyle: gemspec
+
+Metrics/BlockLength:
+  Exclude:
+    - '*.gemspec'
+    - 'spec/**/*_spec.rb'
+
+Layout/LineLength:
+  Max: 110
+
+Style/Documentation:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Exclude:
+    - Gemfile

@@ -1,0 +1,18 @@
+current directory: /home/runner/work/ruby_header_parser/ruby_header_parser/vendor/bundle/ruby/3.3.0/gems/debug_inspector-1.2.0/ext/debug_inspector
+/opt/hostedtoolcache/Ruby/3.3.5/x64/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/runner/work/ruby_header_parser/ruby_header_parser/vendor/bundle/ruby/3.3.0/gems/debug_inspector-1.2.0/ext/debug_inspector
+make DESTDIR\= sitearchdir\=./.gem.20241012-1782-k4mlb5 sitelibdir\=./.gem.20241012-1782-k4mlb5 clean
+
+current directory: /home/runner/work/ruby_header_parser/ruby_header_parser/vendor/bundle/ruby/3.3.0/gems/debug_inspector-1.2.0/ext/debug_inspector
+make DESTDIR\= sitearchdir\=./.gem.20241012-1782-k4mlb5 sitelibdir\=./.gem.20241012-1782-k4mlb5
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+current directory: /home/runner/work/ruby_header_parser/ruby_header_parser/vendor/bundle/ruby/3.3.0/gems/debug_inspector-1.2.0/ext/debug_inspector
+make DESTDIR\= sitearchdir\=./.gem.20241012-1782-k4mlb5 sitelibdir\=./.gem.20241012-1782-k4mlb5 install
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20241012-1782-k4mlb5
+
+current directory: /home/runner/work/ruby_header_parser/ruby_header_parser/vendor/bundle/ruby/3.3.0/gems/debug_inspector-1.2.0/ext/debug_inspector
+make DESTDIR\= sitearchdir\=./.gem.20241012-1782-k4mlb5 sitelibdir\=./.gem.20241012-1782-k4mlb5 clean
