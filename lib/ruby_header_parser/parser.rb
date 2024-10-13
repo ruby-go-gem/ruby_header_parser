@@ -354,7 +354,7 @@ module RubyHeaderParser
     # @param type [String]
     def pointer_length(type)
       type =~ /(\*+)$/
-      ::Regexp.last_match(1).length
+      ::Regexp.last_match(1)&.length || 0
     end
   end
 end
