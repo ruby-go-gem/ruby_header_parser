@@ -301,7 +301,8 @@ module RubyHeaderParser
     #   - length [Integer]
     def analyze_argument_type(function_name:, arg_pos:, parts:)
       pointer, length = prepare_argument_parts(arg_pos:, parts:)
-      original_type = Util.sanitize_type(parts[0...-1].join(" "))
+      type = parts[0...-1] || []
+      original_type = Util.sanitize_type(type.join(" "))
 
       case original_type
       when /\*+$/
