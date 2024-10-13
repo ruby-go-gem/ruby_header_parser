@@ -1,6 +1,7 @@
 # RubyHeaderParser
 Parser for `ruby.h`
 
+[![Gem Version](https://badge.fury.io/rb/ruby_header_parser.svg)](https://badge.fury.io/rb/ruby_header_parser)
 [![test](https://github.com/sue445/ruby_header_parser/actions/workflows/test.yml/badge.svg)](https://github.com/sue445/ruby_header_parser/actions/workflows/test.yml)
 
 ## Installation
