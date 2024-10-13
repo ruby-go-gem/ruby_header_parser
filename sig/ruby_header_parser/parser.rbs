@@ -68,12 +68,12 @@ module RubyHeaderParser
         function_name: String,
         arg_pos: Integer,
         parts: Array[String]
-      ) -> [String, Symbol?, Integer]
+      ) -> [String, (:ref | :array | :ref_array | :function | :sref | :str_array | :in_ref)?, Integer]
 
     def prepare_argument_parts: (
         parts: Array[String],
         arg_pos: Integer
-      ) -> [Symbol?, Integer]
+      ) -> [(:array)?, Integer]
 
     def pointer_length: (String) -> Integer
   end

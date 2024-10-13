@@ -329,13 +329,16 @@ module RubyHeaderParser
     #   - pointer [Symbol,nil]
     #   - length [Integer]
     def prepare_argument_parts(parts:, arg_pos:)
-      pointer = nil
-      length = 0
-
       if parts[-1] =~ /\[([0-9]+)?\]$/
         parts[-1].gsub!(/\[([0-9]+)?\]$/, "")
         length = ::Regexp.last_match(1).to_i
-        pointer = :array
+
+        unless parts[-1] =~ /^[0-9a-zA-Z_]+$/
+          # last elements isn't dummy argument
+          parts << "arg#{arg_pos}"
+        end
+
+        return [:array, length]
       end
 
       unless parts[-1] =~ /^[0-9a-zA-Z_]+$/
@@ -343,7 +346,7 @@ module RubyHeaderParser
         parts << "arg#{arg_pos}"
       end
 
-      [pointer, length]
+      [nil, 0]
     end
 
     # @param type [String]
