@@ -1,3 +1,0 @@
-class Dir
-  def self.tmpdir: () -> String
-end
