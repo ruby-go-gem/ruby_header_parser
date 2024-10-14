@@ -109,6 +109,10 @@ gems:
     revision: 704f7e6b395fca717cc25c562598ca86015ed545
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
+- name: tmpdir
+  version: '0'
+  source:
+    type: stdlib
 - name: yaml
   version: '0'
   source:
