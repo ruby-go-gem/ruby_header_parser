@@ -4,7 +4,7 @@ module RubyHeaderParser
   # Manager for config file
   class Config
     # @!attribute [r] data
-    #   @return [Hash]
+    # @return [Hash]
     attr_reader :data
 
     # @param config_file [String]

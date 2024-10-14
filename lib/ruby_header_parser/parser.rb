@@ -4,19 +4,19 @@ module RubyHeaderParser
   # parse `ruby.h` using `ctags`
   class Parser # rubocop:disable Metrics/ClassLength
     # @!attribute [r] header_file
-    #   @return [String]
+    # @return [String]
     attr_reader :header_file
 
     # @!attribute [r] include_paths
-    #   @return [Array<String>]
+    # @return [Array<String>]
     attr_reader :include_paths
 
     # @!attribute [r] dist_preprocessed_header_file
-    #   @return [String]
+    # @return [String]
     attr_reader :dist_preprocessed_header_file
 
-    # @!attribute [r] data
-    #   @return [RubyHeaderParser::Config]
+    # @!attribute [r] config
+    # @return [RubyHeaderParser::Config]
     attr_reader :config
 
     DEFAULT_HEADER_FILE = "#{RbConfig::CONFIG["rubyhdrdir"]}/ruby.h".freeze

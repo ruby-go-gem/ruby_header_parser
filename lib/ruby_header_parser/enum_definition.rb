@@ -7,7 +7,7 @@ module RubyHeaderParser
     #   @return [String]
     attr_accessor :name
 
-    # @!attribute enum_value_definitions
+    # @!attribute values
     #   @return [Array<String>]
     attr_accessor :values
 
