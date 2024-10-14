@@ -24,3 +24,4 @@ gems:
     ignore: true
 
   - name: yaml
+  - name: tmpdir
