@@ -2,7 +2,7 @@
 Parser for `ruby.h`
 
 [![Gem Version](https://badge.fury.io/rb/ruby_header_parser.svg)](https://badge.fury.io/rb/ruby_header_parser)
-[![test](https://github.com/sue445/ruby_header_parser/actions/workflows/test.yml/badge.svg)](https://github.com/sue445/ruby_header_parser/actions/workflows/test.yml)
+[![test](https://github.com/ruby-go-gem/ruby_header_parser/actions/workflows/test.yml/badge.svg)](https://github.com/ruby-go-gem/ruby_header_parser/actions/workflows/test.yml)
 
 ## Installation
 
@@ -49,7 +49,7 @@ enum_definitions = parser.extract_enum_definitions
 
 See below for details.
 
-https://sue445.github.io/ruby_header_parser/RubyHeaderParser/Parser.html
+https://ruby-go-gem.github.io/ruby_header_parser/RubyHeaderParser/Parser.html
 
 See [CONFIG.md](CONFIG.md) for config file details
 
@@ -61,7 +61,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/sue445/ruby_header_parser.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ruby-go-gem/ruby_header_parser.
 
 ## License
 

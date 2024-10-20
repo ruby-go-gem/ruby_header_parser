@@ -45,7 +45,7 @@ enum:
 ```
 
 ## Full configuration file
-[config/default.yml](config/default.yml) is used by https://github.com/sue445/go-gem-wrapper to generate bindings for Go.
+[config/default.yml](config/default.yml) is used by https://github.com/ruby-go-gem/go-gem-wrapper to generate bindings for Go.
 
 ## `function.include_name`, `struct.include_name`, `type.include_name`, `enum.include_name`
 Return functions and structures that match the condition with a [RubyHeaderParser::Parser](lib/ruby_header_parser/parser.rb)
