@@ -1,6 +1,10 @@
 # ref. https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes#configuring-automatically-generated-release-notes
 
 changelog:
+  exclude:
+    labels:
+      - chore
+
   categories:
     - title: ":bomb: Breaking Changes"
       labels:
@@ -13,10 +17,6 @@ changelog:
     - title: ":bug: Bug Fixes"
       labels:
         - bug
-
-    - title: ":ghost: Maintenance"
-      labels:
-        - chore
 
     - title: ":dependabot: Dependency updates"
       labels:
