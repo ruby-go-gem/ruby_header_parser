@@ -2,6 +2,7 @@ function:
   include_name:
     - !ruby/regexp /^rb_/i
     - !ruby/regexp /^rstring_/i
+    - !ruby/regexp /^rarray_/i
 
   exclude_name:
     # deprecated functions
