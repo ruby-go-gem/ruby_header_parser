@@ -1,5 +1,10 @@
 ## [Unreleased]
-[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.2.0...main)
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.3.0...main)
+
+## [0.3.0](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.3.0) - 2024-11-24
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.2.0...v0.3.0)
+
+* Support `RARRAY_` https://github.com/ruby-go-gem/ruby_header_parser/pull/21
 
 ## [0.2.0](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.2.0) - 2024-10-21
 [full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.1.0...v0.2.0)
