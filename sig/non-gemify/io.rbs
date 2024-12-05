@@ -1,4 +1,0 @@
-class IO
-  def readlines: (?String sep, ?Integer limit, ?chomp: bool) -> ::Array[String]
-    | ...
-end
