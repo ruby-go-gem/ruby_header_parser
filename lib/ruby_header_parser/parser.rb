@@ -93,8 +93,11 @@ module RubyHeaderParser
     def extract_enum_definitions
       stdout = execute_ctags("--c-kinds=e --fields=+n")
 
+      # Workaround for Ruby::UnannotatedEmptyCollection on steep 1.9.0+
+      name_to_definition = {} #: Hash[String, RubyHeaderParser::EnumDefinition] # rubocop:disable Layout/LeadingCommentSpace
+
       name_to_definitions =
-        stdout.each_line.with_object({}) do |line, hash|
+        stdout.each_line.with_object(name_to_definition) do |line, hash|
           parts = line.split("\t")
 
           enum_name = Util.find_field(parts, "enum")
