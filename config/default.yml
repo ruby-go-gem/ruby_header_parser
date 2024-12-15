@@ -110,6 +110,10 @@ function:
       4: array
     rb_funcallv_public:
       4: array
+    rb_gc_register_address:
+      1: in_ref
+    rb_gc_unregister_address:
+      1: in_ref
     rb_get_values_at:
       5: function
     rb_glob:

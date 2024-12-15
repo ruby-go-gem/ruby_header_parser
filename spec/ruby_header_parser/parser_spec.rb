@@ -201,6 +201,36 @@ RSpec.describe RubyHeaderParser::Parser do
       its(:typeref)    { should eq typeref(type: "void") }
       its(:args)       { should eq args }
     end
+
+    context "rb_gc_register_address" do
+      subject { definitions.find { |d| d.name == "rb_gc_register_address" } }
+
+      let(:args) do
+        [
+          argument(type: "VALUE", name: "valptr", pointer: :in_ref),
+        ]
+      end
+
+      its(:name)       { should eq "rb_gc_register_address" }
+      its(:definition) { should eq "void rb_gc_register_address(VALUE *valptr)" }
+      its(:typeref)    { should eq typeref(type: "void") }
+      its(:args)       { should eq args }
+    end
+
+    context "rb_gc_unregister_address" do
+      subject { definitions.find { |d| d.name == "rb_gc_unregister_address" } }
+
+      let(:args) do
+        [
+          argument(type: "VALUE", name: "valptr", pointer: :in_ref),
+        ]
+      end
+
+      its(:name)       { should eq "rb_gc_unregister_address" }
+      its(:definition) { should eq "void rb_gc_unregister_address(VALUE *valptr)" }
+      its(:typeref)    { should eq typeref(type: "void") }
+      its(:args)       { should eq args }
+    end
   end
 
   describe "#extract_static_inline_function_definitions" do
