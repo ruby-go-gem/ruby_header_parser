@@ -13,6 +13,10 @@ Layout/HashAlignment:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
 
+Layout/LeadingCommentSpace:
+  AllowRBSInlineAnnotation: true
+  AllowSteepAnnotation: true
+
 Layout/SpaceAroundOperators:
   Exclude:
     # Suppress line breaks in spec files (e.g `it { should xxxx }`, `its(:method) { should xxxx }` )
