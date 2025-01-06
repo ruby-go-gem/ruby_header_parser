@@ -25,3 +25,4 @@ gems:
 
   - name: yaml
   - name: tmpdir
+  - name: erb

@@ -29,6 +29,10 @@ gems:
     revision: '09beb2100db10cbf4773ed0e71ddf79280a2f275'
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
+- name: erb
+  version: '0'
+  source:
+    type: stdlib
 - name: fileutils
   version: '0'
   source:

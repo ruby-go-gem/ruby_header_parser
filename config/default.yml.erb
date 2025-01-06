@@ -68,6 +68,15 @@ function:
     # FIXME: Workaround for "undefined reference to `rb_class_descendants'" on GitHub Actions (Ubuntu 22.04)
     - rb_class_descendants
 
+    <% if Gem::Version.create(RUBY_VERSION) >= Gem::Version.create("3.4.0") %>
+    # Removed since ruby 3.4+
+    - rb_data_object_make
+    - rb_newobj
+    - rb_newobj_of
+    - rb_st_init_existing_table_with_size
+    - rb_st_replace
+    <% end %>
+
   pointer_hint:
     RSTRING_PTR:
       self: raw

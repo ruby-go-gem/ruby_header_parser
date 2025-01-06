@@ -2,6 +2,7 @@
 
 require "yaml"
 require "tmpdir"
+require "erb"
 
 require_relative "ruby_header_parser/version"
 
