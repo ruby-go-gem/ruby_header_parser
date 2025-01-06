@@ -1,5 +1,10 @@
 ## [Unreleased]
-[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.0...main)
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.1...main)
+
+## [0.4.1](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.4.1) - 2025-01-07
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.0...v0.4.1)
+
+* Fix build error with Ruby 3.4 + GitHub Actions (Ubuntu 22.04) https://github.com/ruby-go-gem/ruby_header_parser/pull/30
 
 ## [0.4.0](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.4.0) - 2025-01-07
 [full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.3.1...v0.4.0)
