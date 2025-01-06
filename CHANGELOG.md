@@ -1,5 +1,10 @@
 ## [Unreleased]
-[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.3.1...main)
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.0...main)
+
+## [0.4.0](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.4.0) - 2025-01-07
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.3.1...v0.4.0)
+
+* Exclude removed methods in Ruby 3.4 and support erb config file https://github.com/ruby-go-gem/ruby_header_parser/pull/29
 
 ## [0.3.1](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.3.1) - 2024-12-15
 [full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.3.0...v0.3.1)
