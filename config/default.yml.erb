@@ -75,6 +75,9 @@ function:
     - rb_newobj_of
     - rb_st_init_existing_table_with_size
     - rb_st_replace
+
+    # FIXME: Workaround for "undefined reference to `rb_undefine_finalizer'" on GitHub Actions (Ubuntu 22.04)
+    - rb_undefine_finalizer
     <% end %>
 
   pointer_hint:
