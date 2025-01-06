@@ -6,14 +6,14 @@ RSpec.describe RubyHeaderParser::Config do
   describe "#function_arg_pointer_hint" do
     subject { config.function_arg_pointer_hint(function_name:, pos:) }
 
-    context "found in config/default.yml" do
+    context "found in config/default.yml.erb" do
       let(:function_name) { "rb_funcallv" }
       let(:pos) { 4 }
 
       it { should eq :array }
     end
 
-    context "not found in config/default.yml" do
+    context "not found in config/default.yml.erb" do
       let(:function_name) { "rb_funcallv" }
       let(:pos) { 5 }
 
@@ -24,13 +24,13 @@ RSpec.describe RubyHeaderParser::Config do
   describe "#function_self_pointer_hint" do
     subject { config.function_self_pointer_hint(function_name) }
 
-    context "found in default.yml" do
+    context "found in default.yml.erb" do
       let(:function_name) { "RSTRING_PTR" }
 
       it { should eq :raw }
     end
 
-    context "not found in config/default.yml" do
+    context "not found in config/default.yml.erb" do
       let(:function_name) { "rb_class2name" }
 
       it { should eq :ref }

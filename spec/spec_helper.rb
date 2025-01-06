@@ -29,5 +29,5 @@ end
 
 # @return [String]
 def default_config_file
-  File.expand_path("../config/default.yml", __dir__)
+  File.expand_path("../config/default.yml.erb", __dir__)
 end

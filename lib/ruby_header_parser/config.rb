@@ -11,7 +11,8 @@ module RubyHeaderParser
     #
     # @note See [CONFIG.md](../file.CONFIG.html) for config file details
     def initialize(config_file)
-      yaml = File.read(config_file)
+      erb = File.read(config_file)
+      yaml = ERB.new(erb).result
       @data = YAML.safe_load(yaml, aliases: true, permitted_classes: [Regexp])
     end
 
