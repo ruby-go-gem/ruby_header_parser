@@ -1,5 +1,10 @@
 ## [Unreleased]
-[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.1...main)
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.2...main)
+
+## [0.4.2](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.4.2) - 2025-03-06
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.1...v0.4.2)
+
+* Treat `RSTRING_END` return value as a `char*` instead of `string` https://github.com/ruby-go-gem/ruby_header_parser/pull/33
 
 ## [0.4.1](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.4.1) - 2025-01-07
 [full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.0...v0.4.1)
