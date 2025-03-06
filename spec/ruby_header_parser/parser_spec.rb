@@ -310,7 +310,7 @@ RSpec.describe RubyHeaderParser::Parser do
 
       its(:name)       { should eq "RSTRING_END" }
       its(:definition) { should eq "RSTRING_END(VALUE str)" }
-      its(:typeref)    { should eq typeref(type: "char", pointer: :ref) }
+      its(:typeref)    { should eq typeref(type: "char", pointer: :raw) }
       its(:args)       { should eq args }
     end
 
