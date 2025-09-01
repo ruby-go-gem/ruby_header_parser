@@ -6,7 +6,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 2b121e82ceb72668b62221f3de139c2ce16663d6
+    revision: 14112a82013860a7d2e5246b4c4f36fbb8c349dc
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: binding_of_caller
@@ -14,7 +14,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 2b121e82ceb72668b62221f3de139c2ce16663d6
+    revision: 14112a82013860a7d2e5246b4c4f36fbb8c349dc
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: dbm
@@ -26,7 +26,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 2b121e82ceb72668b62221f3de139c2ce16663d6
+    revision: 14112a82013860a7d2e5246b4c4f36fbb8c349dc
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: erb
@@ -46,7 +46,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 2b121e82ceb72668b62221f3de139c2ce16663d6
+    revision: 14112a82013860a7d2e5246b4c4f36fbb8c349dc
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: parser
@@ -54,7 +54,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 2b121e82ceb72668b62221f3de139c2ce16663d6
+    revision: 14112a82013860a7d2e5246b4c4f36fbb8c349dc
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: prism
@@ -74,7 +74,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 2b121e82ceb72668b62221f3de139c2ce16663d6
+    revision: 14112a82013860a7d2e5246b4c4f36fbb8c349dc
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: rake
@@ -82,7 +82,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 2b121e82ceb72668b62221f3de139c2ce16663d6
+    revision: 14112a82013860a7d2e5246b4c4f36fbb8c349dc
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: regexp_parser
@@ -90,7 +90,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 2b121e82ceb72668b62221f3de139c2ce16663d6
+    revision: 14112a82013860a7d2e5246b4c4f36fbb8c349dc
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: rspec-parameterized-core
@@ -106,15 +106,15 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 2b121e82ceb72668b62221f3de139c2ce16663d6
+    revision: 14112a82013860a7d2e5246b4c4f36fbb8c349dc
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: rubocop-ast
-  version: '1.30'
+  version: '1.46'
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 2b121e82ceb72668b62221f3de139c2ce16663d6
+    revision: 14112a82013860a7d2e5246b4c4f36fbb8c349dc
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: tmpdir
