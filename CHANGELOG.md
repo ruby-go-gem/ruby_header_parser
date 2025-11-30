@@ -1,5 +1,11 @@
 ## [Unreleased]
-[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.2...main)
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.3...main)
+
+## [0.4.3](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.4.3) - 2025-11-30
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.2...v0.4.3)
+
+* Release gem from GitHub Actions
+* https://github.com/ruby-go-gem/ruby_header_parser/pull/46
 
 ## [0.4.2](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.4.2) - 2025-03-06
 [full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.1...v0.4.2)
