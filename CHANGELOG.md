@@ -1,5 +1,11 @@
 ## [Unreleased]
-[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.3...main)
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.5.0...main)
+
+## [0.5.0](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.5.0) - 2025-12-26
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.3...v0.5.0)
+
+* Support `rb_set_foreach` in Ruby 4.0
+  * https://github.com/ruby-go-gem/ruby_header_parser/pull/56
 
 ## [0.4.3](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.4.3) - 2025-11-30
 [full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.2...v0.4.3)
