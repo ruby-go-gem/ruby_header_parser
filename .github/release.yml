@@ -10,6 +10,10 @@ changelog:
       labels:
         - breaking change
 
+    - title: ":lock: Security Fix"
+      labels:
+        - security
+
     - title: ":rocket: Features"
       labels:
         - enhancement
