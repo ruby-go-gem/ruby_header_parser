@@ -36,6 +36,7 @@ Gem::Specification.new do |spec|
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
 
+  spec.add_development_dependency "irb"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rbs", ">= 3.7.0"
   spec.add_development_dependency "rdoc"
