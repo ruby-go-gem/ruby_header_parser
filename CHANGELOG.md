@@ -1,5 +1,11 @@
 ## [Unreleased]
-[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.5.0...main)
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.5.1...main)
+
+## [0.5.1](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.5.1) - 2026-08-23
+[full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.5.0...v0.5.1)
+
+* ci: Migrate release_gem workflow to sue445/workflows (Also testing the gem release)
+  * https://github.com/ruby-go-gem/ruby_header_parser/pull/88
 
 ## [0.5.0](https://github.com/ruby-go-gem/ruby_header_parser/releases/tag/v0.5.0) - 2025-12-26
 [full changelog](http://github.com/ruby-go-gem/ruby_header_parser/compare/v0.4.3...v0.5.0)
