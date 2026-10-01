@@ -6,7 +6,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: fab0baffe7dc4c7306137372fe9f0e2a53c14e12
+    revision: 2d0f5aed046c0822b3a0c163967b79fb5116b194
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: binding_of_caller
@@ -14,7 +14,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: fab0baffe7dc4c7306137372fe9f0e2a53c14e12
+    revision: 2d0f5aed046c0822b3a0c163967b79fb5116b194
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: dbm
@@ -26,7 +26,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: fab0baffe7dc4c7306137372fe9f0e2a53c14e12
+    revision: 2d0f5aed046c0822b3a0c163967b79fb5116b194
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: erb
@@ -54,7 +54,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: fab0baffe7dc4c7306137372fe9f0e2a53c14e12
+    revision: 2d0f5aed046c0822b3a0c163967b79fb5116b194
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: parallel
@@ -62,7 +62,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: fab0baffe7dc4c7306137372fe9f0e2a53c14e12
+    revision: 2d0f5aed046c0822b3a0c163967b79fb5116b194
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: parser
@@ -70,7 +70,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: fab0baffe7dc4c7306137372fe9f0e2a53c14e12
+    revision: 2d0f5aed046c0822b3a0c163967b79fb5116b194
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: pp
@@ -90,7 +90,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: fab0baffe7dc4c7306137372fe9f0e2a53c14e12
+    revision: 2d0f5aed046c0822b3a0c163967b79fb5116b194
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: psych
@@ -102,7 +102,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: fab0baffe7dc4c7306137372fe9f0e2a53c14e12
+    revision: 2d0f5aed046c0822b3a0c163967b79fb5116b194
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: rake
@@ -110,7 +110,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: fab0baffe7dc4c7306137372fe9f0e2a53c14e12
+    revision: 2d0f5aed046c0822b3a0c163967b79fb5116b194
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: rdoc
@@ -122,7 +122,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: fab0baffe7dc4c7306137372fe9f0e2a53c14e12
+    revision: 2d0f5aed046c0822b3a0c163967b79fb5116b194
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: rspec-parameterized-core
@@ -138,7 +138,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: fab0baffe7dc4c7306137372fe9f0e2a53c14e12
+    revision: 2d0f5aed046c0822b3a0c163967b79fb5116b194
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: rubocop-ast
@@ -146,7 +146,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: fab0baffe7dc4c7306137372fe9f0e2a53c14e12
+    revision: 2d0f5aed046c0822b3a0c163967b79fb5116b194
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: strscan
